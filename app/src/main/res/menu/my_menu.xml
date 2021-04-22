@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/delete_db"
+        android:title="Delete All"
+        android:icon="@drawable/ic_delete_black_24dp"
+        app:showAsAction="always"/>
+    <item android:id="@+id/import_data"
+        android:title="Import Contacts"
+        android:icon="@drawable/ic_import_contacts_black_24dp"
+        app:showAsAction="always"
+        />
+</menu>

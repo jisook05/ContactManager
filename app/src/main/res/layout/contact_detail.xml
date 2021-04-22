@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/id_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@mipmap/ic_launcher"
+        android:paddingTop="50dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:hint="first name"
+        app:layout_constraintTop_toBottomOf="@+id/id_image"
+        android:inputType="textCapSentences"
+        tools:ignore="MissingConstraints"
+         />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="48dp"
+        android:hint="last name"
+        android:inputType="textCapSentences"
+        app:layout_constraintLeft_toRightOf="@+id/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/id_image" />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:hint="phone number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="phone"
+        android:maxLength="10"
+        app:layout_constraintTop_toBottomOf="@+id/first_name"
+        />
+    <EditText
+        android:id="@+id/dob"
+        android:hint="date of birth"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/firstcontact"
+        android:hint="first date of contact"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/address1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address 1"
+        android:width="280dp"
+        android:height="50dp"
+        android:inputType="textCapSentences"
+        app:layout_constraintTop_toBottomOf="@+id/firstcontact"
+        />
+    <EditText
+        android:id="@+id/address2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address 2"
+        android:width="280dp"
+        android:height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/address1"
+        />
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:width="160dp"
+        android:height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/address2"
+        android:inputType="textCapSentences"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:hint="State"
+        android:inputType="textCapWords"
+        app:layout_constraintLeft_toRightOf="@+id/city"
+        app:layout_constraintTop_toBottomOf="@+id/address2"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/zipcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="130dp"
+        android:height="50dp"
+        android:hint="Zip Code"
+        android:inputType="number"
+        android:maxLength="5"
+        app:layout_constraintLeft_toRightOf="@+id/state"
+        app:layout_constraintTop_toBottomOf="@+id/address2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/address2"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Save"
+        android:onClick="saveContact"
+
+        />
+
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/save_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Delete"
+        android:onClick="deleteContact"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+        app:layout_constraintLeft_toRightOf="@id/dob"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        app:layout_constraintLeft_toRightOf="@+id/firstcontact"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
